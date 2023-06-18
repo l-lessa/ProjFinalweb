@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estacionamento Floresta Negra</title>
+</head>
+<body>
+  <h1>Estacionamento Floresta Negra</h1>
+  <h3>Cadastro de Cliente</h3>
+  <form action="cadastrar_usuario.php" method="post">
+    <label>Nome: <input type="text" name="nome" id="nome"></label><br>
+    <label>CPF: <input type="text" name="cpf" id="cpf"></label><br>
+    <label>Marca Veículo: <input type="text" name="marca" id="marca"></label><br>
+    <label>Modelo Veículo: <input type="text" name="modelo" id="modelo"></label><br>
+    <label>Placa: <input type="text" name="placa" id="placa"></label><br>
+    <label>Telefone: <input type="text" name="telefone" id="telefone"></label><br>
+    <input type="submit" value="enviar" id="enviar" onclick="return validarFormulario()">
+  </form>
+
+  <a href="escolha.php">Voltar</a>
+
+  <script>
+    function validarFormulario() {
+      let nome = document.getElementById("nome").value;
+      let cpf = document.getElementById("cpf").value;
+      let marca = document.getElementById("marca").value;
+      let modelo = document.getElementById("modelo").value;
+      let placa = document.getElementById("placa").value;
+      let telefone = document.getElementById("telefone").value;
+
+      if (!isNaN(nome)) {
+        alert("digite um nome valido");
+        document.getElementById("nome").focus();
+        return false;
+      }
+      if (nome === "") {
+        alert("digite nome");
+        document.getElementById("nome").focus();
+        return false;
+      }
+      if (cpf === ""){
+        alert("digite cpf");
+        document.getElementById("cpf").focus();
+        return false;
+      }
+      if (marca === ""){
+        alert("digite marca do veiculo");
+        document.getElementById("marca").focus();
+        return false;
+      }
+      if (modelo === ""){
+        alert("digite modelo do veiculo");
+        document.getElementById("modelo").focus();
+        return false;
+      }
+      if (placa === ""){
+        alert("digite placa");
+        document.getElementById("placa").focus();
+        return false;
+      }
+      if (telefone === ""){
+        alert("digite telefone");
+        document.getElementById("telefone").focus();
+        return false;
+      }
+      return true;
+    }
+  </script>
+</body>
+</html>
