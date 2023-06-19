@@ -10,7 +10,8 @@
 <body>
   <h1>Estacionamento Floresta Negra</h1>
   <a href="index.html">Cadastrar Cliente</a>
-  <a href="#">Alterar Cadastro</a>
+  <a href="listar_cadastro_update.php">Alterar Cadastro</a>
+  <a href="listar_cadastro.php">Listar Cadastro</a>
 
   <?php
         session_start();                
