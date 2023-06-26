@@ -1,9 +1,9 @@
 <?php
 
 $server = "localhost";
-$db= "estacionamentofn";
-$user = "root";
-$senha = "";
+$db= "id20936297_estacionamentofn";
+$user = "id20936297_root";
+$senha = "kxeS3]k[s/0dg2}G";
 
 $con = mysqli_connect($server,$user,$senha,$db);
 if(!$con){

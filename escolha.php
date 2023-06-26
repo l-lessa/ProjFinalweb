@@ -9,20 +9,14 @@
 </head>
 <body>
   <h1>Estacionamento Floresta Negra</h1>
-  <a href="index.html">Cadastrar Cliente</a>
-  <a href="listar_cadastro_update.php">Alterar Cadastro</a>
-  <a href="listar_cadastro.php">Listar Cadastro</a>
-
-  <?php
-        session_start();                
-        if(isset($_SESSION["esta_logado"]) 
-            && $_SESSION["esta_logado"] == "true"){     
-            echo "<br><br><br><a href='logout.php'>logout</a>";            
-        }else{            
-            header('Location: login.html');
-        }
-        
-        
-    ?>
+  <div class="escolha">
+      <a href="cadastro.html">Cadastrar Cliente</a>
+      <a href="listar_cadastro_update.php">Alterar Cadastro</a>
+      <a href="listar_cadastro.php">Listar Cadastro</a>
+  </div>
+  
+  <div class="logout">
+  <a href="logout.php">Logout</a>
+  </div>
 </body>
 </html>

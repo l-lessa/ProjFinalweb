@@ -10,14 +10,14 @@ $placa = $_POST["placa"];
 $telefone = $_POST["telefone"];
 
 
-$sql = "insert into cliente (id,nome,cpf,marca,modelo,placa,telefone)
-            values ('null','$nome','$cpf','$marca','$modelo','$placa','$telefone')";
+$sql = "insert into cliente (id,nome,cpf,marca,modelo,placa,telefone) 
+        values (NULL,'$nome','$cpf','$marca','$modelo','$placa','$telefone')";
 
-mysqli_query($con,$sql) ;
+mysqli_query($con,$sql) or die (mysqli_error($con));
 
 mysqli_close($con);
 
-header('Location: index.html');
+header('Location: escolha.php');
 
 
 ?>

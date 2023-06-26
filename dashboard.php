@@ -13,7 +13,7 @@
 
 
     <?php
-        session_start();                
+                       
         if(isset($_SESSION["esta_logado"]) 
             && $_SESSION["esta_logado"] == "true"){
                 header('Location: escolha.php');           
